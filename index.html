@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhomi University Portal | Excellence in Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-left">
+                <span><i class="fas fa-phone"></i> +91 7667412035</span>
+                <span><i class="fas fa-envelope"></i> contact@bhomiuniversity.edu</span>
+            </div>
+            <div class="utility-right">
+                <a href="#">ALUMNI</a> | <a href="#">ADMISSIONS</a> | <a href="#">LOGOUT</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container nav-flex">
+            <div class="logo">
+                <img src="images/bhomi.png.jpeg" alt="Bhomi University Logo">
+            </div>
+            <nav class="mega-nav">
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#">ACADEMICS <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-grid">
+                                <div>
+                                    <h4>Departments</h4>
+                                    <a href="#">Information Technology</a>
+                                    <a href="#">Business Management</a>
+                                    <a href="#">Applied Sciences</a>
+                                </div>
+                                <div>
+                                    <h4>Student Resources</h4>
+                                    <a href="#">E-Library</a>
+                                    <a href="#">Download Syllabus</a>
+                                    <a href="#">Exam Portal</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">PLACEMENT</a></li>
+                    <li><a href="#" class="btn-portal">DASHBOARD</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="container">
+            <div class="banner-text">
+                <h1>Bhomi University Portal</h1>
+
+                <p>Empowering the future through intelligence and curiosity.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-padding dashboard-bg">
+        <div class="container">
+            <div class="grid-layout">
+                
+                <aside class="sidebar">
+                    <div class="glass-card profile-section">
+                        <div class="profile-frame">
+                            <img src="images/kallu.png.jpeg" alt="Student Photo">
+                        </div>
+                        <h3>kallu</h3>
+                        <p class="dept">diploma in cs</p>
+                        
+                        <div class="attendance-tracker">
+                            <div class="tracker-header">
+                                <span>Attendance Status</span>
+                                <span class="pct-text">88%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill animate-progress" style="width: 88%;"></div>
+                            </div>
+                            <p class="tracker-note"><i class="fas fa-check-circle"></i> Eligible for Exams</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="main-content">
+                    <div class="search-bar-bhomi">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search Attendance, Results, Fees...">
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div><span>CGPA</span><h4>8.92</h4></div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-wallet"></i>
+                            <div>
+                                <span>Pending Fee</span>
+                                <h4 class="text-danger">₹45,000</h4>
+                                <button class="btn-pay-small" onclick="openPayment()">Pay Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card marksheet-card">
+                        <div class="marksheet-header">
+                            <h3>Bhomi University Grade Report</h3>
+                            <span class="status-badge pass">PROMOTED</span>
+                        </div>
+                        <table class="bhomi-table">
+                            <thead>
+                                <tr><th>Code</th><th>Subject</th><th>Total</th><th>Grade</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>CS401</td><td>Java</td><td>90</td><td>O</td></tr>
+                                <tr><td>CS402</td><td>Web Development</td><td>83</td><td>A+</td></tr>
+                                <tr><td>CS403</td><td>Maths</td><td>88</td><td>A+</td></tr>
+                                <tr><td>CS404</td><td>Artificial Intelligence</td><td>85</td><td>A</td></tr>
+                                <tr class="total-row">
+                                    <td colspan="2">SGPA</td>
+                                    <td colspan="2">8.92</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="marksheet-footer">
+                            <button class="btn-outline" onclick="window.print()"><i class="fas fa-download"></i> Download Marksheet</button>
+                        </div>
+                    </div>
+
+                    <div class="card registration-card">
+                        <div class="registration-header">
+                            <h3>Course Registration (Sem V)</h3>
+                        </div>
+                        <div class="registration-body">
+                            <table class="bhomi-table reg-table">
+                                <thead>
+                                    <tr><th>Select</th><th>Course</th><th>Credits</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><input type="checkbox" class="course-check" data-credits="4" checked disabled></td><td>Core: Algorithm Design</td><td>4</td></tr>
+                                    <tr><td><input type="checkbox" class="course-check" data-credits="3" onchange="updateCredits()"></td><td>Elective: Cloud Computing</td><td>3</td></tr>
+                                    <tr><td><input type="checkbox" class="course-check" data-credits="3" onchange="updateCredits()"></td><td>Elective: Cyber Security</td><td>3</td></tr>
+                                    <tr><td><input type="checkbox" class="course-check" data-credits="3" onchange="updateCredits()"></td><td>Elective: Data Science</td><td>3</td></tr>
+                                    <tr><td><input type="checkbox" class="course-check" data-credits="2" onchange="updateCredits()"></td><td>Elective: Mobile App Development</td><td>2</td></tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="registration-footer">
+                            <div class="credit-display">Total Selected Credits: <span id="totalCredits">4</span> / 10</div>
+                            <button class="btn-portal" onclick="submitRegistration()">Submit Choices</button>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h3>Secure Fee Payment - Bhomi University</h3>
+                <span class="close-modal" onclick="closePayment()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="payment-details"><span>Balance:</span><span class="text-danger">₹45,000</span></div>
+                <div class="method-option"><input type="radio" name="pay" checked> UPI (GPay/PhonePe)</div>
+                <button class="btn-confirm-pay" onclick="simulatePayment()">Complete Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
